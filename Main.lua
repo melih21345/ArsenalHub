@@ -118,3 +118,33 @@ UIS.InputBegan:Connect(function(input, processed)
 end)
 
 print("ARSENAL HUB V2 YUKLENDI!")
+-- ARSENAL HUB V3
+-- PANEL KAPATMA BUTONU
+
+local CloseButton = Instance.new("TextButton")
+
+CloseButton.Name = "CloseButton"
+CloseButton.Size = UDim2.new(0, 35, 0, 35)
+CloseButton.Position = UDim2.new(1, -42, 0, 7)
+
+CloseButton.BackgroundColor3 =
+Color3.fromRGB(180, 40, 40)
+
+CloseButton.Text = "X"
+CloseButton.TextColor3 =
+Color3.fromRGB(255, 255, 255)
+
+CloseButton.TextSize = 18
+CloseButton.Font = Enum.Font.GothamBold
+
+CloseButton.Parent = Frame
+
+-- Yuvarlak köşeler
+local CloseCorner = Instance.new("UICorner")
+CloseCorner.CornerRadius = UDim.new(0, 6)
+CloseCorner.Parent = CloseButton
+
+-- X butonuna basılınca paneli gizle
+CloseButton.MouseButton1Click:Connect(function()
+    Frame.Visible = false
+end)
